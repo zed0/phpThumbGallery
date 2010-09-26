@@ -1,0 +1,162 @@
+/*
+-----------------------------------------------
+Name:     Gallery
+Designer: Ben Falconer
+URL:      http://zed0.homeip.net
+Date:     9 September 2010
+----------------------------------------------- */
+
+body
+{
+	font:small "Trebuchet MS",Trebuchet,Verdana,Sans-Serif;
+	background-color:#eef;
+}
+
+a
+{
+	display: block;
+	height: 100%;
+}
+
+a:link
+{
+	color: #00a;
+	text-decoration: none;
+}
+
+a:visited
+{
+	color:#007;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: #a9d;
+	text-decoration: none;
+}
+
+a img
+{
+	margin: 5px 5px 5px 5px;
+	border-width: 0;
+	vertical-align: middle;
+}
+
+h1
+{
+	margin: 0px 5px 5px 5px;
+	text-align: center;
+	display: inline;
+}
+
+p,span
+{
+	display: inline;
+	text-decoration: none;
+	color:#000;
+}
+
+.text
+{
+	overflow: hidden;
+	float: left;
+	clear: none;
+	text-align: center;
+	border: 1px #000000 solid;
+	/*display:table-cell;*/
+	vertical-align: middle;
+	/*display: block;*/
+	position: relative;
+	height: 100%;
+	height: 110px;
+	width: 110px;
+	margin: 5px 5px 5px 5px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.thumb
+{
+	overflow: hidden;
+	float: left;
+	clear: none;
+	text-align: center;
+	border: 1px #000000 solid;
+	/*display:table-cell;*/
+	vertical-align: middle;
+	/*display: block;*/
+	position: relative;
+	height: 100%;
+	height: 110px;
+	width: 110px;
+	margin: 5px 5px 5px 5px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	/*line-height: 100px;*/
+}
+
+.thumb img
+{
+	vertical-align: middle;
+}
+
+
+/*Not currently used*/
+/*
+.title
+{
+	line-height: normal;
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-image:url('/system/Transparent.png');
+	color:#004;
+	border-style: solid;
+	border-color: #000;
+	border-width: 0 0 1px 0;
+}
+
+.title:hover
+{
+	opacity: 0;
+	filter: alpha(opacity=0);
+	background-color: transparent;
+	background-image: none;
+	border-style: none;
+}
+*/
+
+.info
+{
+	line-height: normal;
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-image:url('/system/Transparent.png');
+	color:#004;
+	border-style: solid;
+	border-color: #000;
+	border-width: 1px 0 0 0;
+	line-height:15px;
+}
+
+.info span
+{
+	line-height:10px;
+	font-size: smaller;
+}
+
+/*Uncomment to make disappear only when info is hovered rather than the entire thumbnail*/
+/*.info:hover*/
+.thumb:hover .info
+{
+	opacity: 0;
+	filter: alpha(opacity=0);
+	/*color: transparent;*/
+	background-color: transparent;
+	background-image: none;
+	border-style: none;
+}

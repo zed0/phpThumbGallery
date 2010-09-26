@@ -1,0 +1,2 @@
+This is intended to run from a directory below the webroot and should work in folders and an equal level.
+This uses quite a lot of linux specific programs to create thumbnails, at some point I may get around to adding Windows versions of the commands.
