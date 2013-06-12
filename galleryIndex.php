@@ -4,14 +4,21 @@ $fontSize = 10; //The font size used on text thumbnails
 
 $imageExts = array('.jpg','.jpeg','.png','.gif','.bmp','.ico','.svg','.tiff','.psd','.xcf');
 $documentExts = array('.pdf','.doc','.html','.htm','.ps','.docx');
-$textExts = array('.txt','.php','.cpp','.tex','.lua','.java','.js','.css');
-$videoExts = array('.avi','.mp4','.mpeg','.mkv','wmv','flv');
+$textExts = array('.txt','.php','.cpp','.tex','.lua','.java','.js','.css','.py');
+$videoExts = array('.avi','.mp4','.mpeg','.mkv','.wmv','.flv');
 $soundExts = array('.mp3','.wav','.ogg','.flac','.wma');
 $archiveExts = array('.zip','.tar.gz','.rar','.bz2','.7z','.apk','.jar');
 $thumbExt = ".thm.jpg";
 
 $allExts = array_merge($imageExts, $documentExts, $textExts, $videoExts, $soundExts, $archiveExts);
-$cleanDir = $_SERVER["REQUEST_URI"];
+if(is_dir($_SERVER["DOCUMENT_ROOT"].$_SERVER["REQUEST_URI"]))
+{
+	$cleanDir = $_SERVER["REQUEST_URI"];
+}
+else
+{
+	$cleanDir = pathinfo($_SERVER["REQUEST_URI"],PATHINFO_DIRNAME)."/";
+}
 $dir = "..$cleanDir";
 $thumbDir = ".thm/";
 
